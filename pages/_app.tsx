@@ -43,7 +43,8 @@ export default function App({ Component, pageProps }: AppProps) {
         modalSize="compact"
         chains={chains}
         theme={darkTheme({
-          accentColor: "#F3BA2F",
+          accentColor: "#00FFB2",
+          accentColorForeground: "#0f0f0f",
         })}
       >
         <LitProvider>

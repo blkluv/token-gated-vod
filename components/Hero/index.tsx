@@ -32,7 +32,6 @@ const resourceId = {
 
 export default function Hero() {
   // Inputs
-  const [name, setName] = useState<string | undefined>(undefined);
   const [file, setFile] = useState<File | undefined>(undefined);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
@@ -83,7 +82,7 @@ export default function Hero() {
           sources: [
             {
               file: file,
-              name: name || file.name,
+              name: file.name,
               playbackPolicy: {
                 type: "webhook",
                 webhookId: "f76dba7a-bcbf-4b0d-8bb9-bdb83b3da4a8",
@@ -143,8 +142,9 @@ export default function Hero() {
       });
       return;
     }
-    if (!name || !litGateParams || !file) {
-      toast("Please fill all the fields", {
+
+    if (!file) {
+      toast("Please choose a file", {
         style: {
           borderRadius: "10px",
           background: "#333",
@@ -153,6 +153,17 @@ export default function Hero() {
       });
       return;
     }
+    if (!litGateParams.unifiedAccessControlConditions) {
+      toast("Please choose the access control conditions", {
+        style: {
+          borderRadius: "10px",
+          background: "#333",
+          color: "#fff",
+        },
+      });
+      return;
+    }
+    console.log(litGateParams);
     createAsset?.();
   };
 
@@ -182,27 +193,24 @@ export default function Hero() {
   }, [litNodeClient, createStatus, savedSigningConditionsId, authSig, asset]);
 
   return (
-    <section className=" h-screen flex flex-col lg:flex-row-reverse">
-      <div className="w-full h-1/2 lg:h-full lg:w-1/2">
+    <section className="p-10 h-screen flex flex-col lg:flex-row-reverse">
+      <div className="w-full h-1/2 lg:h-full lg:w-1/2 ">
         <div className="relative">
-          <Image
-            src="/hero.png"
+          <img
+            src="https://solana-nft.withlivepeer.com/_next/image?url=%2Fhero.png&w=2048&q=75"
             alt="BannerImage"
-            width={1000}
-            height={1000}
-            quality={100}
-            className="absolute h-screen w-full lg:object-cover lg:block hidden"
+            className=" h-[90vh] w-full lg:object-cover lg:block hidden rounded-xl"
           />
         </div>
       </div>
-      <div className="lg:w-1/2 p-10 w-full h-full lg:mr-20">
+      <div className="lg:w-1/2  w-full h-full lg:mr-20">
         <p className="text-base font-light text-primary lg:mt-20 mt-5">
-          Livepeer x BSC x Lit
+          Livepeer x Ethereum x Lit
         </p>
-        <h1 className="text-6xl font-bold font-MontHeavy text-gray-100 mt-6">
-          Token gate your videos on BNB with Livepeer.
+        <h1 className="text-5xl font-bold font-MontHeavy text-gray-100 mt-6 leading-tight">
+          Token gate your videos on Ethereum with Livepeer.
         </h1>
-        <p className="text-base font-light text-gray-500 mt-6">
+        <p className="text-base font-light text-zinc-500 mt-2">
           Token gating is a powerful tool for content creators who want to
           monetize their video content. With Livepeer, you can easily create a
           gated video that requires users to hold a certain amount of tokens/NFT
@@ -210,31 +218,10 @@ export default function Hero() {
           gating feature is easy to use and highly customizable
         </p>
         <div className="flex flex-col mt-6">
-          <Input
-            onChange={(e) => setName(e.target.value)}
-            placeholder={"Enter the name of your video/asset"}
-          />
           <div className="h-4" />
-          <div onClick={() => setShowShareModal(true)}>
-            <Input
-              textarea
-              disabled
-              value={
-                !litGateParams.unifiedAccessControlConditions
-                  ? ""
-                  : JSON.stringify(
-                      litGateParams.unifiedAccessControlConditions,
-                      null,
-                      2
-                    )
-              }
-              placeholder={"Enter the description of your NFT"}
-            />
-          </div>
-          <div className="h-2.5" />
           <div
             onClick={() => fileInputRef.current?.click()}
-            className="w-full border-zinc-800 border rounded-md text-zinc-700  p-4 flex items-center justify-center hover:border-zinc-700 "
+            className="w-full border-dashed border-zinc-800 border rounded-md text-zinc-700  p-4 flex items-center justify-center hover:border-zinc-700 "
           >
             <p className="">
               {file ? (
@@ -247,6 +234,23 @@ export default function Hero() {
               )}
             </p>
           </div>
+          <div className="h-5" />
+          <div onClick={() => setShowShareModal(true)}>
+            <Input
+              disabled
+              value={
+                !litGateParams.unifiedAccessControlConditions
+                  ? ""
+                  : JSON.stringify(
+                      litGateParams.unifiedAccessControlConditions,
+                      null,
+                      2
+                    )
+              }
+              placeholder={"Choose the access control conditions"}
+            />
+          </div>
+
           <input
             onChange={(e) => {
               if (e.target.files) {

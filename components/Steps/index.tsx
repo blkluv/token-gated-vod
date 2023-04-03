@@ -1,4 +1,5 @@
 import React from "react";
+import { useAccount, useConnect } from "wagmi";
 
 export default function Steps({
   publickey,
@@ -9,9 +10,9 @@ export default function Steps({
   litGateParams: string;
   completed: boolean;
 }) {
-  const steps = ["Connect Wallet", "Choose Conditions", "Upload Video"];
-
-  const step = completed ? 3 : litGateParams !== "null" ? 2 : publickey ? 1 : 0;
+  const steps = ["Choose Conditions", "Upload Video"];
+  const { isConnected } = useAccount();
+  const step = completed ? 3 : litGateParams !== "null" ? 1 : 0;
 
   return (
     <div className="flex flex-row mt-10 items-center ">
@@ -40,7 +41,7 @@ export default function Steps({
           {i !== steps.length - 1 && (
             <hr
               className={
-                "border border-dashed border-zinc-700 w-[10rem] -mt-10" +
+                "border border-dashed border-zinc-700 w-[22rem] -mt-10" +
                 (i < step ? " border-primary" : "")
               }
             />

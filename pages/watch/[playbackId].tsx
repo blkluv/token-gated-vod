@@ -24,17 +24,22 @@ export default function Watch() {
   });
 
   async function checkLitGate(litNodeClient: any, playbackPolicy: any) {
-    setGateState("checking");
+    console.log("asd");
     const bscSign = await LitJsSdk.checkAndSignAuthMessage({
-      chain: "bsc",
+      chain: "ethereum",
       switchChain: false,
     });
+    console.log("asd 1");
+
     const jwt = await litNodeClient.getSignedToken({
       unifiedAccessControlConditions:
         playbackPolicy.webhookContext.accessControl,
       authSig: { ethereum: bscSign },
       resourceId: playbackPolicy.webhookContext.resourceId,
     });
+
+    console.log(jwt);
+    setGateState("open");
     setJwt(jwt);
     return jwt;
   }
@@ -43,12 +48,17 @@ export default function Watch() {
   useEffect(() => {
     if (playbackInfoStatus !== "success" || !playbackId) return;
     const { playbackPolicy } = playbackInfo?.meta ?? {};
-    console.log(playbackInfo);
-    checkLitGate(litNodeClient, playbackPolicy)
-      .then(() => {})
-      .catch((err: any) => {
-        setGateState("closed");
-      });
+    setGateState("checking");
+
+    setTimeout(() => {
+      checkLitGate(litNodeClient, playbackPolicy)
+        .then(() => {
+          console.log("open");
+        })
+        .catch((err: any) => {
+          setGateState("closed");
+        });
+    }, 1000);
   }, [address, playbackInfoStatus, playbackInfo, playbackId, litNodeClient]);
 
   return (
@@ -63,7 +73,17 @@ export default function Watch() {
         </p>
       </div>
       <div className="flex justify-center text-center font-matter">
-        <div className="overflow-auto border border-solid border-[#C12EF150] rounded-md p-6 w-3/5 mt-20 "></div>
+        <div className="overflow-auto border border-solid border-[#00FFB250] rounded-md p-6 w-3/5 mt-20">
+          {jwt && <Player playbackId={playbackId} accessKey={jwt} />}
+          {gateState == "checking" && (
+            <p className="text-white">Checking, please wait...</p>
+          )}
+          {gateState == "closed" && (
+            <p className="text-white">
+              Sorry, you do not have access to this content
+            </p>
+          )}
+        </div>
       </div>
     </>
   );
