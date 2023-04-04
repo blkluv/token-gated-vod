@@ -85,7 +85,7 @@ export default function Hero() {
               name: file.name,
               playbackPolicy: {
                 type: "webhook",
-                webhookId: "3c54bf7c-6f9e-4312-9254-57166ffc1074",
+                webhookId: "ed324d5b-0a4a-4a3b-8659-5fde5b9e87a2",
                 webhookContext: {
                   accessControl: litGateParams.unifiedAccessControlConditions,
                   resourceId: resourceId,
