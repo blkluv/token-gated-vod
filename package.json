@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@lit-protocol/lit-node-client-nodejs": "^2.1.109",
     "@lit-protocol/sdk-browser": "^1.1.243",
     "@lit-protocol/sdk-nodejs": "^1.1.249",
     "@livepeer/react": "2.4.0",
