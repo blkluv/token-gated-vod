@@ -23,7 +23,7 @@ type LitGateParams = {
 };
 
 const resourceId = {
-  baseUrl: "token-gated-vod.withlivepeer.com",
+  baseUrl: "https://ppv.arvrtise.com",
   path: `/asset/${nanoid()}`,
   orgId: "some-app",
   role: "",
@@ -85,7 +85,7 @@ export default function Hero() {
               name: file.name,
               playbackPolicy: {
                 type: "webhook",
-                webhookId: "ed324d5b-0a4a-4a3b-8659-5fde5b9e87a2",
+                webhookId: "53db04f8-f769-41ba-8d13-20d385c25290",
                 webhookContext: {
                   accessControl: litGateParams.unifiedAccessControlConditions,
                   resourceId: resourceId,
