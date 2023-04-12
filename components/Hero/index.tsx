@@ -197,7 +197,7 @@ export default function Hero() {
       <div className="w-full h-1/2 lg:h-full lg:w-1/2 ">
         <div className="relative">
           <img
-            src="https://www.arvrtise.com/wp-content/uploads/2023/04/hero.png"
+            src="https://www.arvrtise.com/wp-content/uploads/2023/04/hero-1.png"
             alt="BannerImage"
             className=" h-[90vh] w-full lg:object-cover lg:block hidden rounded-xl"
           />
@@ -205,7 +205,7 @@ export default function Hero() {
       </div>
       <div className="lg:w-1/2  w-full h-full lg:mr-20">
         <p className="text-base font-light text-primary lg:mt-20 mt-5">
-          #1 Positive Vibes Network
+          
         </p>
         <h1 className="text-5xl font-bold font-MontHeavy text-gray-100 mt-6 leading-tight">
           Token gate your videos on Ethereum with Livepeer.
