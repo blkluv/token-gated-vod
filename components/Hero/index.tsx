@@ -211,13 +211,10 @@ export default function Hero() {
           Token gate your videos on Ethereum with Livepeer.
         </h1>
         <p className="text-base font-light text-zinc-500 mt-2">
-          Token gating in Livepeer allows content creators to monetize their 
-          videos by requiring users to hold a specific amount of tokens/NFTs 
-          to access the content.
-          Token gating is a powerful tool for content creators who want to
-          monetize their video content. With Livepeer, you can easily create a
-          gated video that requires users to hold a certain amount of tokens/NFT
-          in order to access the content. <br /> <br /> DIY ARVRtising
+          Token gating on ARVRtise PPV allows content creators to monetize 
+          their videos by requiring users to hold a specific amount of 
+          tokens/NFTs to access the content. Say less, earn more.
+          <br /> <br /> DIY ARVRtising
         </p>
         <div className="flex flex-col mt-6">
           <div className="h-4" />
