@@ -197,7 +197,7 @@ export default function Hero() {
       <div className="w-full h-1/2 lg:h-full lg:w-1/2 ">
         <div className="relative">
           <img
-            src="https://www.arvrtise.com/wp-content/uploads/2023/04/hero.jpg"
+            src="https://www.arvrtise.com/wp-content/uploads/2023/04/hero.png"
             alt="BannerImage"
             className=" h-[90vh] w-full lg:object-cover lg:block hidden rounded-xl"
           />
