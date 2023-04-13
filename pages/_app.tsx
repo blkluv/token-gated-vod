@@ -34,7 +34,7 @@ export default function App({ Component, pageProps }: AppProps) {
 
   const client = createReactClient({
     provider: studioProvider({
-      apiKey: "38f4a5d5-d8df-48cd-92a2-e5cde6801000",
+      apiKey: "9b2922c1-8ab3-47c4-a49b-62f5e3df2991",
     }),
   });
   return (

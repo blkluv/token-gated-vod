@@ -208,7 +208,7 @@ export default function Hero() {
           
         </p>
         <h1 className="text-5xl font-bold font-MontHeavy text-gray-100 mt-6 leading-tight">
-          Token gate your videos on Ethereum with Livepeer.
+          ARVRtise PPV videos on Ethereum with Livepeer.
         </h1>
         <p className="text-base font-light text-zinc-500 mt-2">
           Token gating on ARVRtise PPV allows content creators to monetize 
