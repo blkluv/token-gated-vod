@@ -214,7 +214,7 @@ export default function Hero() {
           Token gating on ARVRtise PPV allows content creators to monetize 
           their videos by requiring users to hold a specific amount of 
           tokens/NFTs to access the content. Say less, earn more.
-          <br /> <br /> DIY ARVRtising
+          <br /> <br /> Create a DIY ARVRtising campaign using #ARVRtisePPV.
         </p>
         <div className="flex flex-col mt-6">
           <div className="h-4" />
