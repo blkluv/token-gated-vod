@@ -197,13 +197,13 @@ export default function Hero() {
       <div className="w-full h-1/2 lg:h-full lg:w-1/2 ">
         <div className="relative">
         <Image
-           src="https://www.arvrtise.com/wp-content/uploads/2023/04/ppc-arvrtise-flyer.jpg"
-           alt="BannerImage"
-           layout="responsive"
-           width="1920"
-           height="1080"
-           className=" h-[90vh] w-full lg:object-cover lg:block hidden rounded-xl"
-          />
+          src="https://www.arvrtise.com/wp-content/uploads/2023/04/ppc-arvrtise-flyer.jpg"
+          alt="BannerImage"
+          width={1920}
+          height={1080}
+          className="max-h-[90vh] w-full object-cover lg:block hidden rounded-xl"
+         />
+
         </div>
       </div>
       <div className="lg:w-1/2  w-full h-full lg:mr-20">
