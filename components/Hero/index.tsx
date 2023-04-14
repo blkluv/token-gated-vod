@@ -196,10 +196,13 @@ export default function Hero() {
     <section className="p-10 h-screen flex flex-col lg:flex-row-reverse">
       <div className="w-full h-1/2 lg:h-full lg:w-1/2 ">
         <div className="relative">
-          <img
-            src="https://www.arvrtise.com/wp-content/uploads/2023/04/ppc-arvrtise-flyer.jpg"
-            alt="BannerImage"
-            className=" h-[90vh] w-full lg:object-cover lg:block hidden rounded-xl"
+        <Image
+           src="https://www.arvrtise.com/wp-content/uploads/2023/04/ppc-arvrtise-flyer.jpg"
+           alt="BannerImage"
+           layout="responsive"
+           width="1920"
+           height="1080"
+           className=" h-[90vh] w-full lg:object-cover lg:block hidden rounded-xl"
           />
         </div>
       </div>
