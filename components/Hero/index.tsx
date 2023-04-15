@@ -10,7 +10,6 @@ import Link from "next/link";
 import { useAccount } from "wagmi";
 import Image from "next/image";
 
-
 //@ts-ignore
 import LitJsSdk from "lit-js-sdk";
 //@ts-ignore
@@ -53,7 +52,37 @@ export default function Hero() {
   // Misc
   const { address: publicKey } = useAccount();
 
-  // Step 1: pre-sign the auth message
+  return (
+    <section className="p-10 h-screen flex flex-col lg:flex-row-reverse">
+      <div className="w-full h-1/2 lg:h-full lg:w-1/2 ">
+        <div className="relative">
+        {/* ... (Image related code) */}
+        </div>
+      </div>
+      <div className="lg:w-1/2  w-full h-full lg:mr-20">
+        {/* ... (Other text and description) */}
+        <div className="flex flex-col mt-6">
+          <div className="h-4" />
+          {/* Add emoji and text above the Connect Wallet button */}
+          <div className="flex items-center justify-center mb-3">
+            <span className="text-3xl mr-2">▶️📺</span>
+            <span className="text-xl font-bold">ARVRtise PPV</span>
+          </div>
+          <div
+            onClick={() => fileInputRef.current?.click()}
+            className="w-full border-dashed border-zinc-800 border rounded-md text-zinc-700  p-4 flex items-center justify-center hover:border-zinc-700 "
+          >
+            {/* ... (File selection related code) */}
+          </div>
+          {/* ... (Access control conditions related code) */}
+        </div>
+        {/* ... (Upload and asset status related code) */}
+      </div>
+    </section>
+  );
+}
+
+// Step 1: pre-sign the auth message
   useEffect(() => {
     if (publicKey) {
       Promise.resolve().then(async () => {
@@ -203,7 +232,7 @@ export default function Hero() {
          width={1920}
          height={1080}
          className="lg:block hidden rounded-xl object-cover w-full"
-         />
+/>
 
          
         </div>
@@ -212,13 +241,19 @@ export default function Hero() {
         <p className="text-base font-light text-primary lg:mt-20 mt-5">
           
         </p>
-        <h1 className="text-5xl font-bold font-MontHeavy text-gray-100 mt-6 leading-tight">
+        <h1 className="text-5xl font-bold font-MontHeavy text-gray-100 mt-6 mb-4 lg:mb-0 leading-tight">
           ARVRtise PPV videos on Ethereum with Livepeer.
         </h1>
         <p className="text-base font-light text-zinc-500 mt-2">
-          Token gating on ARVRtise PPV allows content creators to monetize 
-          their videos by requiring users to hold a specific amount of 
-          tokens/NFTs to access the content. Say less, earn more.
+          With ARVRtise PPV, video creators can earn 💯% of your PPV sales 
+          by offering their videos through a unique token subscription. 
+          To watch these PPV videos, viewers need digital coins called tokens 
+          or NFTs, which work like a pass. The best part is that these tokens 
+          can be resold, and every time a pass is sold, the creator earns 🪙 ETH
+          money from secondary sales. Turn your followers to your ARVRtising team. 
+          <a href="https://www.arvrtise.com/arvrtise-ppv/" target="_blank" rel="noopener noreferrer" className="text-primary">
+          Learn More
+          </a>
           <br /> <br /> Create a DIY ARVRtising campaign using #ARVRtisePPV.
         </p>
         <div className="flex flex-col mt-6">
