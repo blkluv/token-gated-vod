@@ -52,37 +52,7 @@ export default function Hero() {
   // Misc
   const { address: publicKey } = useAccount();
 
-  return (
-    <section className="p-10 h-screen flex flex-col lg:flex-row-reverse">
-      <div className="w-full h-1/2 lg:h-full lg:w-1/2 ">
-        <div className="relative">
-        {/* ... (Image related code) */}
-        </div>
-      </div>
-      <div className="lg:w-1/2  w-full h-full lg:mr-20">
-        {/* ... (Other text and description) */}
-        <div className="flex flex-col mt-6">
-          <div className="h-4" />
-          {/* Add emoji and text above the Connect Wallet button */}
-          <div className="flex items-center justify-center mb-3">
-            <span className="text-3xl mr-2">▶️📺</span>
-            <span className="text-xl font-bold">ARVRtise PPV</span>
-          </div>
-          <div
-            onClick={() => fileInputRef.current?.click()}
-            className="w-full border-dashed border-zinc-800 border rounded-md text-zinc-700  p-4 flex items-center justify-center hover:border-zinc-700 "
-          >
-            {/* ... (File selection related code) */}
-          </div>
-          {/* ... (Access control conditions related code) */}
-        </div>
-        {/* ... (Upload and asset status related code) */}
-      </div>
-    </section>
-  );
-}
-
-// Step 1: pre-sign the auth message
+  // Step 1: pre-sign the auth message
   useEffect(() => {
     if (publicKey) {
       Promise.resolve().then(async () => {
@@ -233,8 +203,6 @@ export default function Hero() {
          height={1080}
          className="lg:block hidden rounded-xl object-cover w-full"
 />
-
-         
         </div>
       </div>
       <div className="lg:w-1/2  w-full h-full lg:mr-20">
