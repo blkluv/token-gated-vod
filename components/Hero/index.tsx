@@ -220,10 +220,8 @@ export default function Hero() {
           called tokens or NFTs, which work like a pass. The best part is that 
           these tokens can be resold, and every time a pass is sold, the creator 
           earns 🪙 ETH money from secondary sales. Turn your followers to your 
-          ARVRtising team. <a href="https://www.arvrtise.com/arvrtise-ppv/" target="_blank" rel="noopener noreferrer" className="text-primary">
-          Learn More
- <br /> <br /> #ARVRtisePPV
-        </p>
+          ARVRtising team.<a href="https://www.arvrtise.com/arvrtise-ppv/" target="_blank" rel="noopener noreferrer" className="text-primary">Learn More</a><br /><br />#ARVRtisePPV
+         </p>
         <div className="flex flex-col mt-6">
           <div className="h-4" />
           <div
