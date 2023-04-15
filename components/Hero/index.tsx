@@ -8,6 +8,8 @@ import { toast } from "react-hot-toast";
 import { LivepeerProvider, useAsset, useCreateAsset } from "@livepeer/react";
 import Link from "next/link";
 import { useAccount } from "wagmi";
+import Image from "next/image";
+
 
 //@ts-ignore
 import LitJsSdk from "lit-js-sdk";
@@ -195,17 +197,14 @@ export default function Hero() {
     <section className="p-10 h-screen flex flex-col lg:flex-row-reverse">
       <div className="w-full h-1/2 lg:h-full lg:w-1/2 ">
         <div className="relative">
-        <img
+        <Image
          src="https://www.arvrtise.com/wp-content/uploads/2023/04/ppc-arvrtise-flyer.jpg"
          alt="BannerImage"
-         style={{
-         maxHeight: "90vh",
-         width: "100%",
-         objectFit: "cover",
-         display: "none",
-         }}
-         className="lg:block rounded-xl"
+         width={1920}
+         height={1080}
+         className="lg:block hidden rounded-xl object-cover w-full"
          />
+
          
         </div>
       </div>
