@@ -196,21 +196,22 @@ export default function Hero() {
     <section className="p-10 h-screen flex flex-col lg:flex-row-reverse">
       <div className="w-full h-1/2 lg:h-full lg:w-1/2 ">
         <div className="relative">
-        <Image
-         src="https://www.arvrtise.com/wp-content/uploads/2023/04/ppc-arvrtise-flyer.jpg"
-         alt="BannerImage"
-         width={1920}
-         height={1080}
-         className="lg:block hidden rounded-xl object-cover w-full"
-/>
+          <img
+            src="https://www.arvrtise.com/wp-content/uploads/2023/04/ppc-arvrtise-flyer.jpg"
+            alt="BannerImage"
+            width={1920}
+            height={1080}
+            className="lg:block hidden rounded-xl object-cover w-full"
+            />
         </div>
       </div>
       <div className="lg:w-1/2  w-full h-full lg:mr-20">
         <p className="text-base font-light text-primary lg:mt-20 mt-5">
-          
+
         </p>
-        <h1 className="text-5xl font-bold font-MontHeavy text-gray-100 mt-6 mb-4 lg:mb-0 leading-tight">
-          Earn 💯% by token-gating your videos
+        <h1 className="text-5xl font-bold font-MontHeavy text-gray-100 mt-6 leading-tight">
+          Earn 💯 by token-gating your videos
+
         </h1>
         <p className="text-base font-light text-zinc-500 mt-2">
           With ARVRtise PPV powered by Livepeer, video creators can earn 💯% 
@@ -221,8 +222,7 @@ export default function Hero() {
           earns 🪙 ETH money from secondary sales. Turn your followers to your 
           ARVRtising team. <a href="https://www.arvrtise.com/arvrtise-ppv/" target="_blank" rel="noopener noreferrer" className="text-primary">
           Learn More
-          </a>
-          <br /> <br />#ARVRtisePPV
+ <br /> <br /> #ARVRtisePPV
         </p>
         <div className="flex flex-col mt-6">
           <div className="h-4" />
