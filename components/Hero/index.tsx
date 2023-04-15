@@ -242,19 +242,19 @@ export default function Hero() {
           
         </p>
         <h1 className="text-5xl font-bold font-MontHeavy text-gray-100 mt-6 mb-4 lg:mb-0 leading-tight">
-          ARVRtise PPV videos on Ethereum with Livepeer.
+          Earn 💯% by token-gating your videos
         </h1>
         <p className="text-base font-light text-zinc-500 mt-2">
-          With ARVRtise PPV, video creators can earn 💯% of your PPV sales 
-          by offering their videos through a unique token subscription. 
-          To watch these PPV videos, viewers need digital coins called tokens 
-          or NFTs, which work like a pass. The best part is that these tokens 
-          can be resold, and every time a pass is sold, the creator earns 🪙 ETH
-          money from secondary sales. Turn your followers to your ARVRtising team. 
-          <a href="https://www.arvrtise.com/arvrtise-ppv/" target="_blank" rel="noopener noreferrer" className="text-primary">
+          With ARVRtise PPV powered by Livepeer, video creators can earn 💯% 
+          of your PPV sales by offering their videos through a unique token 
+          subscription. To watch these PPV videos, viewers need digital coins 
+          called tokens or NFTs, which work like a pass. The best part is that 
+          these tokens can be resold, and every time a pass is sold, the creator 
+          earns 🪙 ETH money from secondary sales. Turn your followers to your 
+          ARVRtising team. <a href="https://www.arvrtise.com/arvrtise-ppv/" target="_blank" rel="noopener noreferrer" className="text-primary">
           Learn More
           </a>
-          <br /> <br /> Create a DIY ARVRtising campaign using #ARVRtisePPV.
+          <br /> <br />#ARVRtisePPV
         </p>
         <div className="flex flex-col mt-6">
           <div className="h-4" />
